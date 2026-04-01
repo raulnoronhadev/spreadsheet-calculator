@@ -89,6 +89,8 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
+          maxWidth: '100vw',
+          overflow: 'hidden',
           minHeight: '100vh',
           bgcolor: 'background.default',
           px: { xs: 2, md: 6 },
@@ -221,7 +223,7 @@ export default function App() {
                 overflow: 'hidden',
               }}
             >
-              <TableContainer sx={{ maxHeight: 520 }}>
+              <TableContainer sx={{ maxHeight: 520, overflowX: 'auto' }}>
                 <Table stickyHeader size="small">
                   <TableHead>
                     <TableRow>
