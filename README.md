@@ -2,6 +2,8 @@
 
 Simple web application to view Excel spreadsheets and automatically calculate the total in the **Value** column.
 
+Link: https://spreadsheet-calculator-gljq6s23w-raulnoronhadevs-projects.vercel.app/
+
 ## Features
 
 - Import `.xls` and `.xlsx` files via click or **drag & drop**
