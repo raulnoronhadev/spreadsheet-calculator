@@ -23,7 +23,7 @@ const theme = createTheme({
 });
 
 interface SheetRow {
-  Valentia?: number | string;
+  Valor?: number | string;
   [key: string]: unknown;
 }
 
@@ -61,7 +61,7 @@ export default function App() {
         blankrows: false,
       });
       const hdrs = Object.keys(jsonData[0] || {});
-      const sum = jsonData.reduce((acc, row) => acc + parseValor(row['Valentia']), 0);
+      const sum = jsonData.reduce((acc, row) => acc + parseValor(row['Valor']), 0);
       setHeaders(hdrs);
       setData(jsonData);
       setTotalValue(sum);
@@ -107,7 +107,7 @@ export default function App() {
             </Typography>
           </Box>
           <Typography variant="body2" color="text.secondary">
-            Importe um arquivo <b>.xls</b> ou <b>.xlsx</b> para visualizar e somar a coluna <b>Valentia</b>.
+            Importe um arquivo <b>.xls</b> ou <b>.xlsx</b> para visualizar e somar a coluna <b>Valor</b>.
           </Typography>
         </Box>
 
@@ -202,7 +202,7 @@ export default function App() {
               <AttachMoneyRoundedIcon sx={{ color: 'primary.main' }} />
               <Box>
                 <Typography variant="caption" color="text.secondary" display="block" lineHeight={1}>
-                  TOTAL (coluna Valentia)
+                  TOTAL (coluna Valor)
                 </Typography>
                 <Typography variant="h6" fontWeight={700} color="primary.main" lineHeight={1.4}>
                   R$ {formatBRL(totalValue)}
